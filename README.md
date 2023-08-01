@@ -49,10 +49,17 @@ To run FSEB with a small CNN on FashionMNIST, execute
 python trainer_nn.py --config configs/fseb-cnn-fmnist.json --config_id 0 --cwd path/to/repo
 ```
 
+**CIFAR-10**
+
+To run FSEB with a ResNet-18 on CIFAR-10, execute
+
+```
+python trainer_nn.py --config configs/fseb-resnet18-cifar10.json --config_id 0 --cwd path/to/repo
+```
+
 **Additional config files will be added shortly.**
 
 NB: The configs above do not use additional datasets to construct the context set. Instead, they use a corrupted (i.e., augmented) training set. To use another dataset (e.g., KMNIST or CIFAR-100), change the `--context_points` arg in the config.
-
 
 
 ## CIFAR-10 Corrupted Evaluation

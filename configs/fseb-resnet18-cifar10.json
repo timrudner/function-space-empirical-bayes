@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "fseb-resnet18-cifar10",
+            "id": "0",
+            "env": {
+                "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.3",
+                "TF_CPP_MIN_LOG_LEVEL": "3",
+                "LD_LIBRARY_PATH": "",
+                "PYTHONHASHSEED": "0",
+                "PYTHONUNBUFFERED": "1",
+                "TF_CUDNN_DETERMINISTIC": "1",
+                "TF_DETERMINISTIC_OPS": "1"
+            },
+            "args": [
+                "--prior_var", "0.003",
+                "--prior_likelihood_cov_scale", "1",
+                "--prior_likelihood_cov_diag", "10",
+                "--num_epochs", "200",
+                "--learning_rate", "0.005",
+                "--alpha", "0.05",
+                "--dataset", "cifar10",
+                "--batch_size", "128",
+                "--context_batch_size", "32",
+                "--optimizer_name", "sgd",
+                "--momentum", "0.9",
+                "--model_name", "ResNet18",
+                "--method", "psmap",
+                "--reg_type", "empirical_gaussian_prior_density",
+                "--forward_points", "joint",
+                "--reg_points", "joint",
+                "--context_points", "train",
+                "--context_transform",
+                "--ood_points", "svhn",
+                "--reg_scale", "1",
+                "--prior_mean", "0",
+                "--mc_samples_llk", "1",
+                "--mc_samples_eval", "1",
+                "--init_logvar", "-50",
+                "--log_frequency", "10",
+                "--seed", "0"
+            ]
+        }
+    ]
+}
