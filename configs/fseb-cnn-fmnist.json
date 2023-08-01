@@ -37,10 +37,7 @@
                 "--mc_samples_eval", "1",
                 "--init_logvar", "-50",
                 "--log_frequency", "20",
-                "--wandb_project", "empirical-psvi",
-                "--wandb_account", "tgjr-research",
-                "--seed", "0",
-                "--cwd", "/scratch-ssd/timner/deployment/testing/projects/function-space_methods"
+                "--seed", "0"
             ]
         }
     ]
