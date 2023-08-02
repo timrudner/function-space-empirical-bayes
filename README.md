@@ -1,6 +1,6 @@
 # Function-Space Regularization in Neural Networks: A Probabilistic Perspective
 
-This repository will contain the official implementation for
+This repository contains the official implementation for
 
 **_Function-Space Regularization in Neural Networks: A Probabilistic Perspective_**; Tim G. J. Rudner, Sanyam Kapoor, Shikai Qiu, Andrew Gordon Wilson. **ICML 2023**.
 
@@ -55,6 +55,12 @@ To run FSEB with a ResNet-18 on CIFAR-10, execute
 
 ```
 python trainer_nn.py --config configs/fseb-resnet18-cifar10.json --config_id 0 --cwd path/to/repo
+```
+
+To run FSEB with a pretrained ResNet-50 on CIFAR-10, execute
+
+```
+python trainer_nn.py --config configs/fseb-resnet50-pretrained-cifar10.json --config_id 0 --cwd path/to/repo
 ```
 
 **Additional config files will be added shortly.**
